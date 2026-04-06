@@ -1,0 +1,503 @@
+/* ===================== BASE RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #222222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Images scale down to fit their container, never overflow */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ===================== ANNOUNCEMENT BAR ===================== */
+.announcement-bar {
+  background-color: #8B0000;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+
+/* ===================== HEADER ===================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 16px 40px;
+  border-bottom: 2px solid #e0e0e0;
+  /* flex-wrap lets logo and nav stack on very small screens */
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  color: #8B0000;
+  letter-spacing: 3px;
+}
+
+/* Nav links sit in a row by default */
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333333;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  color: #8B0000;
+  border-bottom: 2px solid #8B0000;
+}
+
+.sale-link {
+  color: #cc0000;
+}
+
+/* ===== Hamburger Button ===== */
+/* Hidden by default – only shown on mobile via @media query below */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Each span is one line of the ☰ icon */
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #8B0000;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+
+/* ===================== HERO BANNER ===================== */
+.hero-banner {
+  background-image: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1400&h=500&fit=crop');
+  background-size: cover;
+  background-position: center;
+  /* Use min-height instead of fixed height so it adapts */
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  padding: 40px 80px;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  padding: 36px 44px;
+  border-radius: 6px;
+  max-width: 480px;
+  /* Ensure it never overflows the viewport */
+  width: 100%;
+}
+
+.hero-heading {
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.hero-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.btn-shop {
+  display: inline-block;
+  background-color: #cc0000;
+  color: #ffffff;
+  padding: 13px 32px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.btn-shop:hover {
+  background-color: #8B0000;
+}
+
+
+/* ===================== CATEGORIES ===================== */
+.categories-section {
+  padding: 50px 40px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  color: #222222;
+  margin-bottom: 32px;
+}
+
+/* flex-wrap makes cards drop to next row on smaller screens */
+.categories-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.category-box {
+  /* flex: 1 1 250px means card can grow/shrink, minimum 250px wide */
+  flex: 1 1 250px;
+  max-width: 320px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.category-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.category-label {
+  background-color: #8B0000;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.category-box:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ===================== PRODUCTS ===================== */
+.products-section {
+  padding: 50px 40px;
+  background-color: #ffffff;
+}
+
+/* flex-wrap lets product cards wrap into multiple rows */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  /* flex: 1 1 200px means card can grow/shrink, minimum 200px wide */
+  flex: 1 1 200px;
+  max-width: 260px;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  border-color: #8B0000;
+}
+
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 14px;
+}
+
+.product-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 6px;
+}
+
+.product-price {
+  font-size: 16px;
+  color: #cc0000;
+  font-weight: bold;
+}
+
+
+/* ===================== PROMO BANNER ===================== */
+.promo-section {
+  background-color: #8B0000;
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.promo-heading {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.promo-text {
+  font-size: 16px;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+
+/* ===================== FOOTER ===================== */
+/* flex-wrap lets footer columns stack on smaller screens */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #1a1a1a;
+  color: #cccccc;
+  padding: 50px 40px;
+  gap: 30px;
+}
+
+.footer-column {
+  /* Each column takes at least 160px and can grow */
+  flex: 1 1 160px;
+  max-width: 220px;
+}
+
+.footer-heading {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  color: #aaaaaa;
+  font-size: 14px;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+
+/* ===================== FOOTER BOTTOM ===================== */
+.footer-bottom {
+  background-color: #111111;
+  color: #666666;
+  text-align: center;
+  padding: 14px;
+  font-size: 13px;
+}
+
+
+/* ===================== MEDIA QUERIES ===================== */
+
+/* --- Tablet: screens 768px wide and below --- */
+@media (max-width: 768px) {
+
+  /* Header: keep logo and hamburger on the same row */
+  .header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 14px 20px;
+  }
+
+  /* Show the hamburger button on mobile */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide the nav menu by default on mobile */
+  /* It takes up the full width below the header row */
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    padding: 10px 0;
+    margin-top: 8px;
+  }
+
+  /* Each nav link becomes a full-width block with padding */
+  .nav-menu .nav-link {
+    display: block;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
+  }
+
+  /* When JavaScript adds .nav-open to the <nav>, show the menu */
+  .nav-menu.nav-open {
+    display: flex;
+  }
+
+  /* Hero: less padding, smaller text */
+  .hero-banner {
+    padding: 40px 24px;
+    min-height: 340px;
+    justify-content: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    padding: 28px 24px;
+  }
+
+  .hero-heading {
+    font-size: 32px;
+  }
+
+  .hero-text {
+    font-size: 15px;
+  }
+
+  /* Sections: reduce side padding */
+  .categories-section,
+  .products-section {
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  /* Promo: reduce padding and font size */
+  .promo-section {
+    padding: 40px 20px;
+  }
+
+  .promo-heading {
+    font-size: 26px;
+  }
+
+  /* Footer columns: wrap to 2 columns on tablet */
+  .footer {
+    padding: 40px 20px;
+  }
+}
+
+
+/* --- Mobile: screens 480px wide and below --- */
+@media (max-width: 480px) {
+
+  /* Announcement bar: smaller text */
+  .announcement-bar {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  /* Logo smaller on mobile */
+  .logo {
+    font-size: 22px;
+  }
+
+  /* Nav links a bit smaller */
+  .nav-link {
+    font-size: 13px;
+  }
+
+  /* Hero: even smaller text for tiny screens */
+  .hero-banner {
+    min-height: 280px;
+    padding: 30px 16px;
+  }
+
+  .hero-heading {
+    font-size: 26px;
+  }
+
+  .hero-text {
+    font-size: 14px;
+  }
+
+  .btn-shop {
+    font-size: 14px;
+    padding: 11px 24px;
+  }
+
+  /* Category and product cards: each takes full row width */
+  .category-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .product-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .product-img {
+    height: 200px;
+  }
+
+  /* Promo section */
+  .promo-heading {
+    font-size: 22px;
+  }
+
+  .promo-text {
+    font-size: 14px;
+  }
+
+  /* Footer columns: stack fully, full width */
+  .footer-column {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}

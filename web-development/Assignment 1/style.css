@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #222222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+
+.announcement-bar {
+  background-color: #8B0000;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 16px 40px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  color: #8B0000;
+  letter-spacing: 3px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333333;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  color: #8B0000;
+  border-bottom: 2px solid #8B0000;
+}
+
+.sale-link {
+  color: #cc0000;
+}
+
+
+.hero-banner {
+  background-image: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1400&h=500&fit=crop');
+  background-size: cover;
+  background-position: center;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  padding: 36px 44px;
+  border-radius: 6px;
+  max-width: 480px;
+}
+
+.hero-heading {
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.hero-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.btn-shop {
+  display: inline-block;
+  background-color: #cc0000;
+  color: #ffffff;
+  padding: 13px 32px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.btn-shop:hover {
+  background-color: #8B0000;
+}
+
+
+.categories-section {
+  padding: 50px 40px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  color: #222222;
+  margin-bottom: 32px;
+}
+
+.categories-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.category-box {
+  width: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.category-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.category-label {
+  background-color: #8B0000;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.category-box:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+.products-section {
+  padding: 50px 40px;
+  background-color: #ffffff;
+}
+
+.products-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  width: 230px;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  border-color: #8B0000;
+}
+
+.product-img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 14px;
+}
+
+.product-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 6px;
+}
+
+.product-price {
+  font-size: 16px;
+  color: #cc0000;
+  font-weight: bold;
+}
+
+
+.promo-section {
+  background-color: #8B0000;
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.promo-heading {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.promo-text {
+  font-size: 16px;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1a1a1a;
+  color: #cccccc;
+  padding: 50px 40px;
+  gap: 20px;
+}
+
+.footer-column {
+  max-width: 220px;
+}
+
+.footer-heading {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  color: #aaaaaa;
+  font-size: 14px;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+
+.footer-bottom {
+  background-color: #111111;
+  color: #666666;
+  text-align: center;
+  padding: 14px;
+  font-size: 13px;
+}
